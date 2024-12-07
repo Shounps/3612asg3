@@ -1,4 +1,4 @@
-/api/circuits 
+/api/circuits "/n"
 /api/circuits/1 
 /api/constructors 
 /api/constructors/mclaren 
