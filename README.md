@@ -11,7 +11,7 @@
 - [/api/constructorResults/mclaren/2023](https://three612asg3-3.onrender.com/api/constructorResults/mclaren/2023): All the constructor results with constructor ref as mclaren and year as 2023.
 - [/api/constructorResults/MERCEDES/2020](https://three612asg3-3.onrender.com/api/constructorResults/MERCEDES/2020): All the constructor results with constructor ref as MERCEDES and year as 2020.
 - [/api/constructorResults/mclaren/2040](https://three612asg3-3.onrender.com/api/constructorResults/mclaren/2040): Gives back an error.
-- [/api/constructorResults/comp3612/2023](https://three612asg3-3.onrender.com/api/constructorResults/comp3612/2023): All the constructor results with comp3612 in it with year 2023.
+- [/api/constructorResults/comp3612/2023](https://three612asg3-3.onrender.com/api/constructorResults/comp3612/2023): Gives an error.
 - [/api/drivers](https://three612asg3-3.onrender.com/api/drivers): All the drivers
 - [/api/drivers/hamilton](https://three612asg3-3.onrender.com/api/drivers/hamilton): All the drivers with hamilton in it.
 - [/api/drivers/HAMilton](https://three612asg3-3.onrender.com/api/drivers/hamilton): All the drivers with hamilton in it.
