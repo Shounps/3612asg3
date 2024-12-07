@@ -19,7 +19,7 @@
 - [/api/driverResults/piastri/2023](https://three612asg3-3.onrender.com/api/driverResults/piastri/2023): All the driver results with name piastri and year 2023.
 - [/api/driverResults/piastri/2002](https://three612asg3-3.onrender.com/api/driverResults/piastri/2002): Gives an error message
 - [/api/races/season/2023](https://three612asg3-3.onrender.com/api/races/season/2023): All the races with season as 2023.
-- [/api/races/seasoning/2023](/api/races/seasoning/2023): Gives an error message
+- [/api/races/seasoning/2023](https://three612asg3-3.onrender.com/api/races/seasoning/2023): Gives an error message
 -  [/api/races/season/2032](https://three612asg3-3.onrender.com/api/races/season/2032): Gives an error
 - [/api/results/race/1100](https://three612asg3-3.onrender.com/api/results/race/1100): All resutls with race id as 1100.
 - [/api/results/race/1756348576](https://three612asg3-3.onrender.com/api/results/race/1756348576): Gives an error.
