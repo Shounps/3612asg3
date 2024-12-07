@@ -116,6 +116,13 @@ app.get('/api/races/season/:year', (req, res) => {
     }
 });
 
+app.use('/api/races/*', (req, res) => {
+    res.status(404).json({
+        error: 'Invalid route',
+        message: `The route '${req.originalUrl}' does not exist.`
+    });
+});
+
 /*--------------------------------------------------Drivers-----------------------------------------*/
 app.get('/api/drivers', (req, res) => {
     res.json(drivers);
