@@ -1,20 +1,20 @@
+// Importing required modules
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
 const port = 3000;
 
+// Middleware to parse JSON bodies in requests
 app.use(express.json());
 
-// app.use((req, res) => {
-//     res.send("Welcome to my COMP3612 Assignment 3");
-// });
-
+// Data storage arrays for circuits, results, races, drivers, and constructors
 let circuits = [];
 let results = [];
 let drivers = [];
 let constructors = [];
 
+// Attempt to load JSON data from files
 try {
     circuits = JSON.parse(fs.readFileSync("./data/circuits.json", 'utf-8'));
     results = JSON.parse(fs.readFileSync("./data/results.json", 'utf-8'));
@@ -27,16 +27,19 @@ catch (err) {
     console.error('Error - could not open data files.', err);
 }
 
+// Start the server and log the port it's running on
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
 
 /*--------------------------------------------------Circuits-----------------------------------------*/
 
+// Endpoint to get all circuits
 app.get('/api/circuits', (req, res) => {
     res.json(circuits);
 });
 
+// Endpoint to get a specific circuit by its ID
 app.get('/api/circuits/:id', (req, res) => {
     const circuit = circuits.filter(c => c.circuitId == req.params.id);
 
@@ -50,10 +53,12 @@ app.get('/api/circuits/:id', (req, res) => {
 
 /*--------------------------------------------------Results-----------------------------------------*/
 
+// Endpoint to get all race results
 app.get('/api/results', (req, res) => {
     res.json(results);
 });
 
+// Endpoint to get results for a specific race by raceId
 app.get('/api/results/race/:raceId', (req, res) => {
 
     const raceId = parseInt(req.params.raceId, 10);
@@ -70,6 +75,7 @@ app.get('/api/results/race/:raceId', (req, res) => {
     }
 });
 
+// Endpoint to get results for a specific season by year
 app.get('/api/results/season/:year', (req, res) => {
     const year = parseInt(req.params.year, 10);
 
@@ -87,10 +93,12 @@ app.get('/api/results/season/:year', (req, res) => {
 
 /*--------------------------------------------------Races-----------------------------------------*/
 
+// Endpoint to get all races
 app.get('/api/races', (req, res) => {
     res.json(races);
 });
 
+// Endpoint to get a specific race by its ID
 app.get('/api/races/id/:id', (req, res) => {
     const id = parseInt(req.params.id, 10);
     const race = races.find(race => race.id === id);
@@ -101,6 +109,7 @@ app.get('/api/races/id/:id', (req, res) => {
     }
 });
 
+// Endpoint to get all races for a specific season by year
 app.get('/api/races/season/:year', (req, res) => {
     const year = parseInt(req.params.year, 10);
 
@@ -116,6 +125,7 @@ app.get('/api/races/season/:year', (req, res) => {
     }
 });
 
+// Catch-all route for invalid race API endpoints
 app.use('/api/races/*', (req, res) => {
     res.status(404).json({
         error: 'Invalid route',
@@ -124,10 +134,13 @@ app.use('/api/races/*', (req, res) => {
 });
 
 /*--------------------------------------------------Drivers-----------------------------------------*/
+
+// Endpoint to get all drivers
 app.get('/api/drivers', (req, res) => {
     res.json(drivers);
 });
 
+// Endpoint to get a specific driver by their reference (driverRef)
 app.get('/api/drivers/:ref', (req, res) => {
     const driver = drivers.find(d => d.driverRef.toLowerCase() === req.params.ref.toLowerCase());
     if (driver) {
@@ -138,10 +151,13 @@ app.get('/api/drivers/:ref', (req, res) => {
 });
 
 /*--------------------------------------------------Constructor -----------------------------------------*/
+
+// Endpoint to get all constructors
 app.get('/api/constructors', (req, res) => {
     res.json(constructors);
 });
 
+// Endpoint to get a specific constructor by their reference (constructorRef)
 app.get('/api/constructors/:ref', (req, res) => {
     const constructor = constructors.find((c) => c.constructorRef.toLowerCase() === req.params.ref.toLowerCase());
     if (constructor) {
@@ -151,6 +167,7 @@ app.get('/api/constructors/:ref', (req, res) => {
     }
 });
 
+// Endpoint to get results for a specific constructor in a specific year
 app.get('/api/constructors/:ref/:year', (req, res) => {
     const { ref, year } = req.params;
 
@@ -170,6 +187,8 @@ app.get('/api/constructors/:ref/:year', (req, res) => {
 });
 
 /*--------------------------------------------------Constructor Results-----------------------------------------*/
+
+// Endpoint to get results for a specific constructor in a specific year
 app.get('/api/constructorResults/:ref/:year', (req, res) => {
     const { ref, year } = req.params;
 
@@ -189,6 +208,8 @@ app.get('/api/constructorResults/:ref/:year', (req, res) => {
 });
 
 /*--------------------------------------------------Driver Results-----------------------------------------*/
+
+// Endpoint to get results for a specific driver in a specific year
 app.get('/api/driverResults/:ref/:year', (req, res) => {
     const { ref, year } = req.params;
 
@@ -205,4 +226,9 @@ app.get('/api/driverResults/:ref/:year', (req, res) => {
             message: `No results for driver '${ref}' in year '${year}'.`
         });
     }
+});
+
+// Catch-all route for unmatched API endpoints
+app.use((req, res) => {
+    res.send("Welcome to my COMP3612 Assignment 3");
 });
