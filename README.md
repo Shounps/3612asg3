@@ -2,7 +2,7 @@
 
 ## TESTING
 
-- [View all paintings](api/paintings): A list of all available paintings.
+- [/api/circuits](https://three612asg3-3.onrender.com/api/circuits): A list of all available paintings.
 - [Painting 433](api/painting/433): Details for painting with ID 433.
 - [Painting 43374534856](api/painting/43374534856): Information on a specific painting.
 - [Gallery G](api/painting/gallery/G): List of paintings from Gallery G.
