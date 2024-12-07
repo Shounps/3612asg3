@@ -6,6 +6,9 @@ const port = 3000;
 
 app.use(express.json());
 
+// app.use((req, res) => {
+//     res.send("Welcome to my COMP3612 Assignment 3");
+// });
 
 let circuits = [];
 let results = [];
@@ -27,7 +30,6 @@ catch (err) {
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
-
 
 /*--------------------------------------------------Circuits-----------------------------------------*/
 
@@ -183,7 +185,6 @@ app.get('/api/constructorResults/:ref/:year', (req, res) => {
 app.get('/api/driverResults/:ref/:year', (req, res) => {
     const { ref, year } = req.params;
 
-    // Filter results by driverRef and race year
     const filteredResults = results.filter(result =>
         result.driver.ref.toLowerCase() === ref.toLowerCase() &&
         result.race.year === parseInt(year, 10)

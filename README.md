@@ -1,6 +1,23 @@
-# COMP 3612 (Fall 2023)
-### Assignment #3: Node API
-
-**Please view `COMP3612 Assignment 3.pdf` for instructions**
-
-  
+/api/circuits 
+/api/circuits/1 
+/api/constructors 
+/api/constructors/mclaren 
+/api/coNSTruCTors/mclaren 
+/api/constructors/javascript 
+/api/constructorResults/mclaren/2023 
+/api/constructorResults/MERCEDES/2020 
+/api/constructorResults/mclaren/2040 
+/api/constructorResults/comp3612/2023 
+/api/drivers 
+/api/drivers/hamilton 
+/api/drivers/HAMilton 
+/api/drivers/randy 
+/api/driverResults/piastre/2023 
+/api/driverResults/piastre/2002 
+/api/races/season/2023 
+/api/races/seasoning/2023 
+/api/races/season/2032 
+/api/results/race/1100 
+/api/results/race/1756348576 
+/api/results/season/2023 
+/api/results/season/2034

@@ -1,0 +1,13 @@
+{
+  "name": "3612asg3",
+  "version": "1.0.0",
+  "description": "/api/circuits \r /api/circuits/1 \r /api/constructors \r /api/constructors/mclaren \r /api/coNSTruCTors/mclaren \r /api/constructors/javascript \r /api/constructorResults/mclaren/2023 \r /api/constructorResults/MERCEDES/2020 \r /api/constructorResults/mclaren/2040 \r /api/constructorResults/comp3612/2023 \r /api/drivers \r /api/drivers/hamilton \r /api/drivers/HAMilton \r /api/drivers/randy \r /api/driverResults/piastre/2023 \r /api/driverResults/piastre/2002 \r /api/races/season/2023 \r /api/races/seasoning/2023 \r /api/races/season/2032 \r /api/results/race/1100 \r /api/results/race/1756348576 \r /api/results/season/2023 \r /api/results/season/2034",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
