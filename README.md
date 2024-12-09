@@ -1,5 +1,10 @@
 # Web API for Formula 1
 
+## Overview
+This Project is based on Node.js which provides data and insights about Formula 1. The API facilitates access to various datasets, including circuits, results, races, drivers, and constructors. 
+
+The data is sourced from JSON files stored locally, ensuring a self-contained environment for testing and usage.
+
 ## TESTING
 
 - [/api/circuits](https://three612asg3-3.onrender.com/api/circuits): All the circuits.
