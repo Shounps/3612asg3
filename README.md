@@ -14,7 +14,7 @@
 - [/api/constructorResults/comp3612/2023](https://three612asg3-3.onrender.com/api/constructorResults/comp3612/2023): Gives an error.
 - [/api/drivers](https://three612asg3-3.onrender.com/api/drivers): All the drivers
 - [/api/drivers/hamilton](https://three612asg3-3.onrender.com/api/drivers/hamilton): All the drivers with hamilton in it.
-- [/api/drivers/HAMilton](https://three612asg3-3.onrender.com/api/drivers/hamilton): All the drivers with hamilton in it.
+- [/api/drivers/HAMilton](https://three612asg3-3.onrender.com/api/drivers/HAMilton): All the drivers with hamilton in it.
 - [/api/drivers/randy](https://three612asg3-3.onrender.com/api/drivers/randy): Gives an error.
 - [/api/driverResults/piastri/2023](https://three612asg3-3.onrender.com/api/driverResults/piastri/2023): All the driver results with name piastri and year 2023.
 - [/api/driverResults/piastri/2002](https://three612asg3-3.onrender.com/api/driverResults/piastri/2002): Gives an error message
