@@ -1,4 +1,4 @@
-# COMP_3612_Asg3
+# Web API for Formula 1
 
 ## TESTING
 
